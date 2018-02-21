@@ -275,15 +275,15 @@ Set-VM -VM $HostnameString -MemoryGB $RAMString -NumCpu $CPUString -Confirm:$fal
 #credentials for further tasks
 $vmLocalUser = "$HostnameString\administrator"
 
-$vmLocalPWord = ConvertTo-SecureString -String "!c8JacUEamn" -AsPlainText -Force
+$vmLocalPWord = ConvertTo-SecureString -String "!LocalPassword" -AsPlainText -Force
 
 $vmLocalCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $vmLocalUser, $vmLocalPWord
  
 #Domain Creds
 
-$JoinNewDomain = '$DomainUser = "DPSK12\sa14"
+$JoinNewDomain = '$DomainUser = "DSuername"
 
-                  $DomainPWord = ConvertTo-SecureString -String "Pirlo#2193" -AsPlainText -Force;
+                  $DomainPWord = ConvertTo-SecureString -String "Password" -AsPlainText -Force;
 
                   $DomainCredential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $DomainUser, $DomainPWord;
 
